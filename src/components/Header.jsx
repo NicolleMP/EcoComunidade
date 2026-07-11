@@ -26,7 +26,14 @@ const Header = () => {
           <li key={to}>
             <NavLink
               to={to}
-              className="flex items-center p-1 gap-2 text-[#44556f] font-semibold rounded-full p-2 hover:bg-[#eaeee9]"
+              className={({ isActive }) =>
+                `flex items-center gap-2 rounded-full p-2 font-semibold transition-colors duration-200
+              ${
+                isActive
+                  ? "bg-[#2D5A27] text-[#f9faf6]"
+                  : "text-[#44556f] hover:bg-[#eaeee9]"
+              }`
+              }
             >
               <Icon size={18} />
               <span>{text}</span>
