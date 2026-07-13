@@ -13,7 +13,7 @@ const Header = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between gap-8 bg-[#f9f9f6] px-4">
+    <nav className="flex items-center justify-between gap-8 bg-[#f9f9f6] p-3">
       <div className="flex items-center text-[#2d5a27]">
         <img src={logo} alt="Logo da Eco-Comunidade" className="w-12" />
         <NavLink to="/" className="text-2xl font-black">
