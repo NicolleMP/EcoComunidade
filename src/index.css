@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme inline {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+}
+
+@utility base {
+  html,
+  body {
+    @apply h-full w-full m-0 p-0;
+  }
+}
