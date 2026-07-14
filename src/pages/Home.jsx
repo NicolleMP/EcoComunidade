@@ -1,4 +1,5 @@
-import Card from "../components/ui/Card/Card";
+import { Camera, Lightbulb } from "lucide-react";
+import FeatureCard from "../components/ui/FeatureCard/FeatureCard";
 
 function Home() {
   return (
@@ -14,7 +15,24 @@ function Home() {
           Pequenas escolhas, grandes transformações.
         </p>
       </div>
-      <Card />
+
+      <div className="grid grid-cols-2">
+        <FeatureCard
+          variant="green"
+          icon={Camera}
+          badge="Câmera ia"
+          title="Escanear Resíduo"
+          description="Tire uma foto para saber como descartar corretamente."
+        />
+
+        <FeatureCard
+          variant="white"
+          icon={Lightbulb}
+          badge="Criatividade"
+          title="Ideias DIY"
+          description="Transforme o que seria lixo em novos objetos úteis."
+        />
+      </div>
     </div>
   );
 }
