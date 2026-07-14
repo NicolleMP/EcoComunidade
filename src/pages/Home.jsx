@@ -1,5 +1,6 @@
-import { Camera, Lightbulb } from "lucide-react";
+import { Camera, Info, Lightbulb, MapPin } from "lucide-react";
 import FeatureCard from "../components/ui/FeatureCard/FeatureCard";
+import InfoCard from "../components/ui/InfoCard/InfoCard";
 
 function Home() {
   return (
@@ -16,7 +17,7 @@ function Home() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-6">
         <FeatureCard
           variant="green"
           icon={Camera}
@@ -31,6 +32,18 @@ function Home() {
           badge="Criatividade"
           title="Ideias DIY"
           description="Transforme o que seria lixo em novos objetos úteis."
+        />
+
+        <InfoCard
+          icon={MapPin}
+          title="Pontos de Coleta"
+          description="Ecopontos perto de você"
+        />
+
+        <InfoCard
+          icon={Info}
+          title="Sobre o projeto"
+          description="Minha missão"
         />
       </div>
     </div>
