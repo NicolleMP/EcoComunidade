@@ -5,9 +5,10 @@
   --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
 }
 
-@utility base {
+@layer base {
   html,
-  body {
-    @apply h-full w-full m-0 p-0;
+  body,
+  #root {
+    @apply m-0 p-0 min-h-screen;
   }
 }

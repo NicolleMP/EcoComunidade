@@ -26,9 +26,9 @@ export default function FeatureCard({
   const style = variants[variant];
 
   return (
-    <div className="max-w-7xl px-8">
+    <div>
       <div
-        className={`rounded-3xl h-70 w-126 p-10 flex flex-col cursor-pointer ${style.card}`}
+        className={`rounded-3xl w-full min-h-70 p-10 flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${style.card}`}
       >
         {/* PRIMEIRA PARTE */}
         <div className="flex items-center justify-between">
