@@ -46,6 +46,14 @@ function Home() {
           />
         </section>
       </main>
+
+      <footer className="border-t border-gray-200 mt-4 w-full">
+        <div className="mx-auto max-w-7xl px-8 py-4">
+          <p className="text-center text-sm text-slate-500">
+            Feito com cuidado para o futuro • EcoComunidade
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
