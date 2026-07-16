@@ -1,7 +1,7 @@
 export default function InfoCard({ icon: Icon, title, description }) {
   return (
     <div>
-      <div className="rounded-3xl bg-white border border-gray-200 shadow-sm w-full min-h-35 p-6 flex items-center gap-6 cursor-pointer">
+      <div className="rounded-3xl bg-white border border-gray-200 shadow-sm w-full min-h-35 p-6 flex items-center gap-6">
         <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-[#EEF2EB]">
           <Icon size={28} className="text-[#2d5a27]" />
         </div>

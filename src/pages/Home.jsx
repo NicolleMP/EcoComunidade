@@ -16,7 +16,7 @@ function Home() {
           Pequenas escolhas, grandes transformações.
         </p>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-10 mb-4">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-10 mb-4 cursor-pointer">
           <FeatureCard
             variant="green"
             icon={Camera}
