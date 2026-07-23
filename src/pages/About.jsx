@@ -4,7 +4,7 @@ import InfoCard from "../components/ui/InfoCard/InfoCard";
 function About() {
   return (
     <main className="min-h-screen flex flex-col items-center">
-      <div className="max-w-7xl px-8 pt-8 w-full text-[#2d5a27]">
+      <div className="max-w-7xl px-8 pt-8 w-full">
         <div className="mx-auto mt-8 max-w-3xl">
           <h1 className="font-serif italic text-4xl text-[#2d5a27] leading-tight">
             Reciclar é um ato de comunidade.
