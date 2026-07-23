@@ -13,7 +13,7 @@ export default function AppRoutes() {
       <Route path="/scanner" element={<Scanner />} />
       <Route path="/diy" element={<Diy />} />
       <Route path="/coleta" element={<Coleta />} />
-      <Route path="/aboute" element={<About />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   );
 }
