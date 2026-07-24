@@ -1,4 +1,32 @@
+import { useState } from "react";
+
 function Diy() {
+  const opcoes = [
+    "Garrafa PET",
+    "Caixa de Papelão",
+    "Latas de Alumínio",
+    "Rolo de Papel",
+    "Potes de Vidro",
+    "Tampinhas",
+    "Jornal",
+    "Tecido",
+  ];
+
+  const [selected, setSelected] = useState([]);
+
+  const toggleSelected = (opcao) => {
+    if (selected.includes(opcao)) {
+      setSelected(selected.filter((item) => item !== opcao));
+    } else {
+      setSelected([...selected, opcao]);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Materiais selecionados: ", selected);
+  };
+
   return (
     <main className="px-6 max-w-2xl mx-auto pt-6 space-y-3">
       <h1 className="font-serif italic text-4xl text-[#2d5a27]">
@@ -14,12 +42,26 @@ function Diy() {
           Quais materias você tem em casa hoje?
         </p>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="flex flex-wrap gap-2 mb-6">
-            <button
-              type="button"
-              className="px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 border bg-[#2d5a27] text-white border-[#2d5a27] shadow-sm scale-105"
-            ></button>
+            {opcoes.map((opcao, index) => {
+              const isSelected = selected.includes(opcao);
+
+              return (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => toggleSelected(opcao)}
+                  className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 border ${
+                    isSelected
+                      ? "bg-[#2d5a27] text-white border-[#2d5a27] shadow-sm scale-105"
+                      : "bg-white text-slate-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400"
+                  }`}
+                >
+                  {opcao} {isSelected ? "Ok" : ""}
+                </button>
+              );
+            })}
           </div>
 
           <label>
@@ -35,9 +77,12 @@ function Diy() {
 
           <button
             type="submit"
+            disabled={selected.length === 0}
             className="w-full py-3 px-4 bg-[#2d5a27] text-white font-medium rounded-xl hover:bg-[#23471f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
           >
-            Gerar ideias de Projetos
+            {selected.length > 0
+              ? `Gerar ideias de Projetos (${selected.length})`
+              : "Selecione ao menos 1 material "}
           </button>
         </form>
       </section>
